@@ -1,0 +1,20 @@
+<Script>
+    function getData(dataId){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=> {console.log("Data 1", dataId);
+            resolve("success");
+    },5000);});}
+
+getData(1)
+   .then((res)=>{console.log("fettching data 2");
+     return getData(2);})
+    .then((res)=>{console.log("fettching data 3");
+    return getData(3);})
+    .then((res)=>{console.log("fettching data 4");
+    return getData(4);
+console.log(res);})
+
+    
+
+
+    </Script>

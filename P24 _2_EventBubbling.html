@@ -1,0 +1,17 @@
+<div style="border:solid; padding: 40px;" onclick="func1()">
+<button onclick="func2(event)">button</button>
+</div>
+
+<script>
+    func1= ()=>{
+        console.log("div clicked")
+
+    }
+    func2= (myvar)=>{
+        console.log("button clicked")
+        console.log(myvar)
+        console.log(typeof myvar)
+        myvar.cancelBubble =true
+        
+    }
+</script>

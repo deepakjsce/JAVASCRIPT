@@ -1,0 +1,31 @@
+<Script>
+//Display all id data simultaneously
+// function getData(dataId){
+//     setTimeout(()=> {console.log("Data 1", dataId), 2000})
+
+// }
+// getData(1);
+// getData(2);
+
+// to display data after 2 second called callback hell
+function getData(dataId, getNextdata){
+    setTimeout(()=> {console.log("Data 1", dataId);
+    if (getNextdata){
+        getNextdata()}
+    
+    },5000)}
+
+getData(1,()=>{
+    console.log("fethching data2");
+    getData(2,()=>{
+        console.log("fethching data3");
+        getData(3,()=>{
+            console.log("fethching data4");
+            getData(4)
+        })
+    })
+})
+
+
+</script>
+

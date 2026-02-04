@@ -1,0 +1,46 @@
+<script>
+    function register(callback){
+     setTimeout(() => {
+         console.log("register");
+         callback();
+     },8000);
+    }
+ 
+    function sendwelcomeemail(callback){
+     setTimeout(() => {
+         console.log("endwelcomeemail");
+         callback();
+     },1000);
+    }
+ 
+    function login(callback){
+     setTimeout(() => {
+         console.log("login");
+         callback();
+     },5000);
+    }
+    function getuserdata(callback){
+     setTimeout(() => {
+         console.log("get_userdata");
+         callback();
+     },1000);
+    }
+
+     function displayuserdata(callback){
+     setTimeout(() => {
+         console.log("Display_userdata");
+         callback();
+     },1000)
+    }
+    //callback hell
+    register(function(){
+        sendwelcomeemail(function(){
+            login(function(){
+                getuserdata(function(){
+                    displayuserdata();
+                }); 
+            });
+        });
+    
+    });       
+</script>
