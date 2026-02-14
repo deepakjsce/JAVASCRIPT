@@ -1,0 +1,29 @@
+<!-- DOM Event Listener -->
+<button class="btn1" onclick="add_event()">Add Event</button>
+<button class="btn2" onclick="remove_event()">Remove Event</button>
+
+<p id="para">
+    TEST
+</p>
+<script type="text/javascript">
+    function add_event() {
+        para = document.querySelector("#para");
+        // console.log(para);
+
+        para.addEventListener("mouseover", function () {
+            console.log("MouseOver Function Called");
+        });
+
+        para.addEventListener("mouseout", myfunc);
+    }
+    function remove_event() {
+        para = document.querySelector("#para");
+        console.log(para);
+        para.removeEventListener("mouseout", myfunc);
+    }
+
+    function myfunc() {
+        console.log("MouseOut Function Called");
+    }
+</script>
+    

@@ -1,0 +1,26 @@
+<input type="text" id="txt1" placeholder="Enter No 1">
+<input type="text" id="txt2" placeholder="Enter No 2">
+<input type="button" value="Add" onclick="add_rec()">
+<p></p>
+<script type="text/javascript">
+function add_rec()
+{// console.log("test")
+    // console.log(document)
+    data1 = document.getElementById("txt1").value;
+    console.log(data1)
+    console.log(typeof data1)
+    data2 = document.querySelector("#txt2").value;
+    if (isNaN(data1) || isNaN(data2)) {
+    //console.log("Please Enter Number Only")
+    document.querySelector("p").innerHTML="Please Enter Number Only";
+}
+else {
+    //ans = data1 + data2
+    //console.log(ans)
+    ans=parseFloat(data1)+parseFloat(data2);
+document.querySelector("p").innerHTML=ans.toFixed(2);
+}
+
+
+}
+</script>

@@ -1,0 +1,15 @@
+<input type="text" id="txt1" placeholder="No.1"><br>
+<input type="text" id="txt2" placeholder="No.2"><br>
+<input type="button" value="Add" onclick="Add_func()" value="Enter">
+<p></p>
+<script type="text/javascript">
+    function Add_func() {
+data1=document.getElementById("txt1").value;
+data2=document.querySelector("#txt2").value;
+//ans=parseInt(data1)+parseInt(data2);
+ans=parseFloat(data1)+parseFloat(data2);
+console.log(ans)
+console.log(ans.toFixed(2))
+document.querySelector("p").innerHTML=ans.toFixed(2);
+   }
+</script>

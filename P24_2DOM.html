@@ -1,0 +1,80 @@
+ <!--<p id="para1">Test 1</p>
+<p id="para2">Test2 </p>
+<p id="para3">Test3 </p>
+<button onclick="myfunc()">Click</button>
+<script type="text/javascript">
+    function myfunc() {
+document.getElementById("para1").innerHTML = "<h1>hello wotrld </h1>";
+document.getElementById("para2").style.backgound = "red";
+         
+ document.getElementById("para3").innerText = "<h1>hello wotrld </h1>";
+    }
+</script> 
+------------------------------------------------------------------
+ <p class="para">Test 1</p>
+ <p class="para">Test2 </p>
+<button onclick="myfunc()">Click</button>
+<script type="text/javascript">
+    function myfunc() {
+    document.getElementsByClassName("para")[0].innerHTML = "hello world";
+    document.getElementsByClassName("para")[1].style.backgound = "purple";
+    
+    }
+</script>
+
+ <p class="para">Test 1</p>
+<p class="para">Test2 </p>
+<button onclick="myfunc()">Click</button>
+<script type="text/javascript">
+    function myfunc() {
+        document.getElementsByTagName("p")[0].innerHTML = "hello world1111";
+    }
+</script>  -->
+
+<!-- <form>
+    <input type="text" name="txt" placeholder="shirt"><br>
+    <input type="text" name="txt" placeholder="1000"><br>
+    <input type="button" onclick="myfunc()" value="Enter"></button>
+</form>
+
+<script type="text/javascript">
+    function myfunc() {
+        //document.getElementsByName("txt")[0].innerHTML = "hello wotrld22222";
+         document.getElementsByName("txt")[0].value = "hello wotrld22222";
+       
+    //    rec=document.getElementsByName("txt") ;
+    //    rec[0].value= "hello wotrld22222";
+    //    rec[1].value= "hello wotrld22222";
+
+    }
+
+</script> -->
+
+<img src="deepa.jpg" width="300" height="250">
+<button onclick="check_attr()">Check</button>
+<button onclick="get_attr()">Get</button>
+<button onclick="set_attr()">set</button>
+<button onclick="remove_attr()">remove</button>
+
+<script type="text/javascript">
+    function check_attr() {
+       ans= document.querySelector("img").hasAttribute("width");
+       console.log(ans);
+    }
+    function get_attr() {
+       ans= document.querySelector("img").getAttribute("width");
+       console.log(ans);
+    }
+    function set_attr() {
+       ans= document.querySelector("img").setAttribute("width",100);
+       console.log(ans);
+       
+    }
+    function remove_attr() {
+       ans= document.querySelector("img").removeAttribute("src");
+       
+    }
+</script>
+
+
+

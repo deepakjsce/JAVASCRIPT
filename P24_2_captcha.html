@@ -1,0 +1,40 @@
+<!-- Math Object - with Captcha -->
+<html>
+<body onload="gen_cap()">
+    <p id="captcha"></p>
+    <input type="text" id="txt">
+    <button onclick="check_cap()">Check</button>
+    <script type="text/javascript">
+        function gen_cap() {
+            // console.log(Math)
+            console.log(Math.random()); // 0 to 1
+            data1 = Math.round(10 * Math.random());
+            console.log(data1);
+            data2 = Math.round(10 * Math.random());
+            console.log(data2);
+
+            str = ` Enter ${data1} + ${data2}`;
+            console.log(str);
+            document.querySelector("#captcha").innerHTML = str;
+            sum = data1 + data2;
+            console.log(sum)
+
+        }
+        function check_cap() {
+            rec = document.querySelector("#txt").value;
+            console.log(rec);
+
+            if (rec == sum) {
+                console.log("Value Valid");
+            }
+            else {
+                console.log("Value inValid");
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
